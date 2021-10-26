@@ -9,10 +9,7 @@ import './App.css'
 function App() {
   const SignupSchema = Yup.object().shape({
     firstName: Yup.array().of(
-      Yup.string()
-        .min(2, 'Too Short!')
-        .max(50, 'Too Long!')
-        .required('Required'),
+      Yup.string().min(2, 'Too Short!').required('Required'),
     ),
   })
 
